@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Inzam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W8r-82-iST">
+                                <rect key="frame" x="70" y="482" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="">
+                                    <imageReference key="image" image="rec" symbolScale="large" renderingMode="template"/>
+                                </state>
+                                <state key="selected" image="stop_1"/>
+                                <connections>
+                                    <action selector="recordAct:" destination="BYZ-38-t0r" eventType="touchDown" id="SV8-xI-Ccp"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ear" translatesAutoresizingMaskIntoConstraints="NO" id="Wzz-eN-vO2">
+                                <rect key="frame" x="70" y="100" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C1V-Jm-tgA">
+                                <rect key="frame" x="35" y="637" width="321" height="134"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="identify">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="animateSpinner:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ItW-9a-q4d"/>
+                                    <action selector="animateSpinner:" destination="BYZ-38-t0r" eventType="touchDown" id="SoI-ia-dP7"/>
+                                    <action selector="predictResults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7AP-Xg-nh2"/>
+                                    <action selector="predictResults:" destination="BYZ-38-t0r" eventType="touchDown" id="tAC-CI-dh8"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="5vT-Zg-vaj">
+                                <rect key="frame" x="150" y="180" width="91" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="etl-Bs-Bc3">
+                                <rect key="frame" x="220" y="482" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle"/>
+                                    <imageReference key="image" image="play" symbolScale="large" renderingMode="template"/>
+                                </state>
+                                <state key="selected" image="stop_2"/>
+                                <connections>
+                                    <action selector="playAct:" destination="BYZ-38-t0r" eventType="touchDown" id="IaS-hs-VFn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="instrumentDisplay" destination="Wzz-eN-vO2" id="n4W-Dy-bkW"/>
+                        <outlet property="playButton" destination="etl-Bs-Bc3" id="Ojl-ed-0QH"/>
+                        <outlet property="recordButton" destination="W8r-82-iST" id="pD4-fk-dE1"/>
+                        <outlet property="spinner" destination="5vT-Zg-vaj" id="Clt-uT-eAu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.46153846153845" y="81.753554502369667"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ear" width="512" height="512"/>
+        <image name="identify" width="321" height="134"/>
+        <image name="play" width="1024" height="1024"/>
+        <image name="rec" width="1024" height="1024"/>
+        <image name="stop_1" width="1024" height="1024"/>
+        <image name="stop_2" width="1024" height="1024"/>
+    </resources>
+</document>
