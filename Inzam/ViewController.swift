@@ -10,8 +10,6 @@ import AVKit
 import AVFoundation
 import SoundAnalysis
 
-//Test coment
-
 class ViewController: UIViewController , AVAudioPlayerDelegate , AVAudioRecorderDelegate {
     
     @IBOutlet weak var spinner: UIActivityIndicatorView!
